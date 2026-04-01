@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700,900);
+
+body {
+  margin: 0;
+  background: #0b2a4a;
+  color: #e8f0ff;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(2, 16, 28, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 64px;
+  font-size: 18px;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding-left: 25px;
+  flex: 0 0 auto;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  height: 100%;
+}
+
+.nav-cart {
+  position: relative;
+  margin-right: 18px;
+  z-index: 1001;
+}
+
+.nav-cart .cart-count {
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: auto;
+}
+
+.nav-right li {
+  margin-right: 22px;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.nav-right li a {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color .18s ease, color .18s ease;
+  height: auto;
+  border-radius: 10px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.nav-right li a:hover,
+.nav-right li a.active {
+  background-color: rgba(34,197,94,0.2);
+  color: #22c55e;
+}
+
+.brand-name {
+  color: #00ffb9;
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+.nav-text-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+/* main */
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.login-page .form .login {
+  margin-top: -31px;
+  margin-bottom: 26px;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(19, 44, 75, 0.95);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #e8f0ff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #22c55e;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #062031;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form button a {
+  color: #062031;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #dbeeff;
+  font-size: 12px;
+}
+
+.form .message a {
+  color: #79ffd1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form .message a:hover {
+  color: #46e6b3;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-header h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #e8f0ff;
+}
+
+.login-header p {
+  color: #dbeeff;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.form input[type="radio"] {
+  width: auto;
+  margin: 0 8px;
+}
+
+.form p {
+  display: inline-block;
+  margin: 0 8px;
+  color: #e8f0ff;
+}
+
+/* Cart icon styles */
+.nav-cart {
+  position: relative;
+  margin-left: 12px;
+  z-index: 999;
+}
+.cart-btn {
+  background: #22c55e;
+  border: none;
+  color: #062031;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.cart-count {
+  background: #ff6b6b;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+}
+
+/* Login and signup pages should not show cart in navbar */
+.navbar .nav-cart {
+  display: none;
+}
