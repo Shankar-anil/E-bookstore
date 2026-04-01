@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <title>Register - BookZone</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="brand-name">
+        <img src="./images/Screenshot 2026-03-29 010458.png" alt="BookZone Logo" class="nav-logo">
+        <img src="./images/Screenshot 2026-03-29 010651.png" alt="BookZone" class="nav-text-image">
+      </a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="Register.html" class="active">Signup</a></li>
+      </ul>
+    </div>
+
+    <!-- Cart icon with count on right side -->
+    <div class="nav-cart">
+        <button class="cart-btn" aria-label="View cart" onclick="window.location.href='cart.html'" style="cursor: pointer;">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span class="cart-count">0</span>
+        </button>
+    </div>
+  </nav>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3 style="color: aliceblue;">SIGNUP</h3>
+            <p style="color: aliceblue;">Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form class="login-form" id="signupForm" onsubmit="handleSignup(event)">
+          <input type="text" id="signupUsername" placeholder="username" required/>
+          <input type="password" id="signupPassword" placeholder="password" required/>
+           <p style="color: rgba(240, 248, 255, 0.733);">Female </p><input type="radio" name="gender" value="female"/>
+           <p style="color: rgba(240, 248, 255, 0.781);"> Male</p><input type="radio" name="gender" value="male" required/> 
+          <button type="submit">Signup</button>
+          <p class="message">Already registered? <a href="login.html">Login</a> here</p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/search.js"></script>
+
+    <script>
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('signupUsername').value.trim();
+            const password = document.getElementById('signupPassword').value.trim();
+            const gender = document.querySelector('input[name="gender"]:checked');
+            
+            // Basic validation
+            if (!username || !password || !gender) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Show success popup
+            alert('✓ You have successfully registered!\n\nUsername: ' + username + '\n\nPlease go to Login page to continue.');
+            
+            // Redirect to login page
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 500);
+        }
+    </script>
+
+</body>
+</body>
+</html>

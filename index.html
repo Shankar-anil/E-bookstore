@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Book zone</title>
+</head>
+<body>
+        <nav class="navbar">
+                <div class="nav-left">
+                    <a href="index.html" class="brand-name">
+                        <img src="./images/Screenshot 2026-03-29 010458.png" alt="BookZone Logo" class="nav-logo">
+                        <img src="./images/Screenshot 2026-03-29 010651.png" alt="BookZone" class="nav-text-image">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Register.html">Signup</a></li>
+                    </ul>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search books..." id="searchInput" aria-label="Search books">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <!-- Cart icon with count on right side -->
+                <div class="nav-cart">
+                    <button class="cart-btn" aria-label="View cart" onclick="window.location.href='cart.html'" style="cursor: pointer;">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+        </nav>
+        <!-- ✅ Book Banner Slider - Shows 4 books sliding horizontally -->
+<section class="banner-slider">
+  <h2 class="slider-heading">Trending Books</h2>
+  <div class="slides-container">
+    <div class="slides" id="bookSlider">
+      <!-- Books will be injected here by JavaScript -->
+    </div>
+  </div>
+  <button class="slider-prev" aria-label="Previous books">❮</button>
+  <button class="slider-next" aria-label="Next books">❯</button>
+</section>
+
+
+    <div class="section-1">
+        <div class="Section-1-text">
+            <h1>BOOK ZONE</h1>
+            <h2>Your Digital Library Awaits</h2>
+            
+            <p class="hero-subtitle">
+                Welcome to BookZone – the premier online destination for book enthusiasts and learners worldwide. 
+                We offer an extensive collection of books spanning education, technology, fiction, and more.
+            </p>
+            
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <h3>Vast Collection</h3>
+                    <p>Thousands of books across all genres and categories</p>
+                </div>
+                <div class="feature">
+                    <i class="fa fa-tag" aria-hidden="true"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Competitive pricing and regular discounts on top titles</p>
+                </div>
+                <div class="feature">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    <h3>Quick Delivery</h3>
+                    <p>Fast and reliable delivery to your doorstep</p>
+                </div>
+                <div class="feature">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <h3>Quality Content</h3>
+                    <p>Curated selection of bestsellers and classics</p>
+                </div>
+            </div>
+            
+            <a href="products.html" class="btn">Explore Collection <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+   <div class="section-2">
+  <h2>Our Products</h2>
+  <div class="gallery" id="bookGallery"></div>
+</div>
+<script>
+const books = [
+  {
+    id: "p1",
+    title: "Data Structures & Algorithms",
+    price: 249,
+    img: "./images/p1.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p2",
+    title: "Innovations in Computer Science and Engineering",
+    price: 199,
+    img: "./images/Innovations.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p3",
+    title: "Computer Science Advances",
+    price: 299,
+    img: "./images/csa.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p4",
+    title: "GKP GATE 2025",
+    price: 279,
+    img: "./images/gate.png",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p5",
+    title: "Tech-Neo Operating System",
+    price: 229,
+    img: "./images/os.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p6",
+    title: "Cloud Computing",
+    price: 349,
+    img: "./images/cc.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p7",
+    title: "A Start To C++ Programming with object oriented Concepts",
+    price: 189,
+    img: "./images/c++.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p8",
+    title: "Python Programming",
+    price: 259,
+    img: "./images/py.png",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p9",
+    title: "Data Structures and Algorithms Using C++",
+    price: 319,
+    img: "./images/dsa.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p10",
+    title: "Compiler Design",
+    price: 495,
+    img: "./images/cd.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p11",
+    title: "Gitanjali: Rabindranath Tagore",
+    price: 159,
+    img: "./images/rt.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p12",
+    title: "The God of Small Things",
+    price: 199,
+    img: "./images/tgst.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p13",
+    title: "The Village",
+    price: 219,
+    img: "./images/tv.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p14",
+    title: "Trilogy",
+    price: 1198,
+    img: "./images/tt.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p15",
+    title: "EARLY INDIANS",
+    price: 499,
+    img: "./images/ei.jpg",
+    link: "book.html",
+    free: false
+  },
+  {
+    id: "p16",
+    title: "Lords Of The Deccan",
+    price: 799,
+    img: "./images/ld.jpg",
+    link: "book.html",
+    free: false
+  },
+  // Example free books:
+  {
+    id: "p17",
+    title: "Pride and Prejudice – Jane Austen",
+    price: 0,
+    img: "./images/p17.jpg",
+    link: "https://www.gutenberg.org/ebooks/1342",
+    free: true
+  },
+  {
+    id: "p18",
+    title: "Frankenstein – Mary Shelley",
+    price: 0,
+    img: "./images/p18.jpg",
+    link: "https://www.gutenberg.org/ebooks/84",
+    free: true
+  }
+];
+
+  // ✅ Initialize Book Slider (4 books carousel)
+  const bookSlider = document.getElementById("bookSlider");
+  let sliderPosition = 0;
+
+  function renderSlider() {
+    bookSlider.innerHTML = "";
+    books.slice(0, 12).forEach(book => { // Show first 12 books in slider
+      const slide = document.createElement("div");
+      slide.classList.add("slide-book");
+      slide.innerHTML = `
+        <img src="${book.img}" alt="${book.title}">
+        <h3>${book.title}</h3>
+        <div class="book-price">${book.free ? "Free" : `₹${book.price}`}</div>
+      `;
+      slide.addEventListener("click", () => {
+        window.location.href = book.link;
+      });
+      bookSlider.appendChild(slide);
+    });
+  }
+
+  function slideBooks(direction) {
+    const bookWidth = 280 + 20; // card width + gap
+    const maxScroll = (books.length - 4) * bookWidth;
+    
+    sliderPosition += direction * bookWidth;
+    sliderPosition = Math.max(0, Math.min(sliderPosition, maxScroll));
+    
+    bookSlider.style.transform = `translateX(-${sliderPosition}px)`;
+  }
+
+  // Auto-slide every 5 seconds
+  let autoSlideInterval;
+  
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      const bookWidth = 280 + 20;
+      const maxScroll = (books.length - 4) * bookWidth;
+      
+      if (sliderPosition >= maxScroll) {
+        sliderPosition = 0; // Reset to beginning
+      } else {
+        sliderPosition += bookWidth;
+      }
+      
+      bookSlider.style.transform = `translateX(-${sliderPosition}px)`;
+    }, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  document.querySelector(".slider-prev").addEventListener("click", () => {
+    stopAutoSlide();
+    slideBooks(-1);
+    startAutoSlide();
+  });
+  
+  document.querySelector(".slider-next").addEventListener("click", () => {
+    stopAutoSlide();
+    slideBooks(1);
+    startAutoSlide();
+  });
+
+  // Pause on hover, resume on mouse leave
+  document.querySelector(".banner-slider").addEventListener("mouseenter", stopAutoSlide);
+  document.querySelector(".banner-slider").addEventListener("mouseleave", startAutoSlide);
+
+  renderSlider();
+  startAutoSlide(); // Start auto-sliding when page loads
+
+  // ✅ Initialize Products Gallery
+  const gallery = document.getElementById("bookGallery");
+
+  books.forEach(book => {
+    const item = document.createElement("div");
+    item.classList.add("image-holder");
+
+    item.innerHTML = `
+      <a href="${book.link}" ${book.free ? 'target="_blank"' : ""}>
+        <img src="${book.img}" alt="${book.title}">
+      </a>
+      <div class="product-meta">
+        <div class="product-title">${book.title}</div>
+        <div class="price">
+          ${book.free ? "Free" : `₹${book.price}`}
+          ${!book.free ? `
+            <button class="price-cart" data-id="${book.id}" data-title="${book.title}" data-price="${book.price}" data-img="${book.img}" aria-label="Add to cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>` : ""}
+        </div>
+        ${
+          book.free
+            ? `<a href="${book.link}" target="_blank">
+                <button class="add-to-cart" style="background-color:#00cc66;">Read Free</button>
+              </a>`
+            : `<button class="add-to-cart" data-id="${book.id}" data-title="${book.title}" data-price="${book.price}" data-img="${book.img}">Add to cart</button>`
+        }
+      </div>
+    `;
+
+    gallery.appendChild(item);
+  });
+</script>
+
+
+    <!-- <div class="section-3">
+        <h3>Products</h3>
+        <br>
+        <div class="view-card">
+            <div class="card">
+                <center><img src="./images/img_11.jpg" alt="Avatar"></center>
+                <div class="container">
+                  <center>
+                    <h4><b>John Doe</b></h4> 
+                    <p>Architect & Engineer</p>
+                  </center> 
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/img_11.jpg" alt="Avatar">
+                <div class="container">
+                  <h4><b>John Doe</b></h4> 
+                  <p>Architect & Engineer</p> 
+                </div>
+            </div>
+
+        </div>
+
+    </div>  -->
+
+    <div class="section-4">
+        <h2>Featured Brands</h2>
+        <div class="brand">
+            <img src="./images/download (1).jpg" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/download (2).png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/images (2).png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/download (5).png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/download (4).png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/images.jpg" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/images.png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/images (3).png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/images (1).jpg" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/images (1).png" alt="">
+        </div>
+    </div>
+
+    <!-- section-5 contact us  -->
+    <div class="section-5">
+        
+              <h2>Contact Us</h2>
+              <p>unlock the world of learning with our bookstore! Use our contact from to explore an extensive collection of educational materials that will redefine your learning journey</p>
+
+              <div class="column">
+                <form action="/index.html">
+                  <label for="fname"> Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <label for="email">Email Id</label>
+                  <input type="text" id="email" name="emailid" placeholder="email id">
+                 <!---- <label for="country">Country</label>  
+                  <select id="country" name="country">
+                    <option value="india">India</option>
+                    <option value="australia">Dubai</option>
+                    <option value="canada">Singapore</option>
+                    <option value="usa">USA</option>---->
+                  </select>
+                  <label for="subject">Message</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+
+              <div class="column contact-info">
+                <div class="contact-detail">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+91724843190">+91 724843190</a></p>
+                  </div>
+                </div>
+                <div class="contact-detail">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>BookZone Headquarters<br>1201/7812 Sanjay Street <br>New Delhi, India 110001</p>
+                  </div>
+                </div>
+                <div class="contact-detail">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@bookzone.com">info@bookzone.com</a></p>
+                  </div>
+                </div>
+                <div class="social-media">
+                  <h3>Follow Us</h3>
+                  <div class="social-links">
+                    <a href="#" class="social-icon">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+        <script>
+        // Delegate clicks on the small price-cart icon to the main add-to-cart button (reuses existing logic)
+        document.addEventListener('click', function(e){
+            const btn = e.target.closest('.price-cart');
+            if(!btn) return;
+            const id = btn.dataset.id;
+            const target = document.querySelector('.add-to-cart[data-id="' + id + '"]');
+            if(target){
+                // trigger existing handler if present
+                target.click();
+            } else {
+                // fallback: increment visible cart count
+                const countEl = document.querySelector('.cart-count');
+                if(countEl){
+                      let n = Number.parseInt(countEl.textContent||'0',10);
+                    countEl.textContent = n + 1;
+                }
+            }
+        });
+        </script>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/search.js"></script>
+
+</body>
+</html>

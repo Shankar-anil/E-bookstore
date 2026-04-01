@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/product_style.css">
+        <title>Book Zone</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="brand-name">
+                    <img src="./images/Screenshot 2026-03-29 010458.png" alt="BookZone Logo" class="nav-logo">
+                    <img src="./images/Screenshot 2026-03-29 010651.png" alt="BookZone" class="nav-text-image">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="Register.html">Signup</a></li>
+                </ul>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search books..." id="searchInput" aria-label="Search books">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Cart icon with count on right side -->
+            <div class="nav-cart">
+                <button class="cart-btn" aria-label="View cart" onclick="window.location.href='cart.html'" style="cursor: pointer;">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="section-body">
+            <div class="vertical-nav">
+                <h3>Categories</h3>
+                <ul class="category-menu">
+                    <li><a href="#Education" class="menu-item">Education</a></li>
+                    <li><a href="#Adventure" class="menu-item">Adventure</a></li>
+                    <li><a href="#Thriller" class="menu-item">Thriller</a></li>
+                    <li><a href="#Romantic" class="menu-item">Romantic</a></li>
+                    <li><a href="#Comedy" class="menu-item">Comedy</a></li>
+                </ul>
+            </div>
+            <div class="gallery-main">
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="Education">
+        <h2>Education</h2>
+        <div class="gallery">
+
+            <div class="image-holder">
+                <a href="/book.html"><img src="./images/dsa.jpg.png"></a>
+                <p class="book-title">Data Structures and Algorithms Made Easy</p>
+                <div class="desc">Free sample<br><i class="fa fa-shopping-cart"></i><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/ninja.jpeg">
+                <p class="book-title">From Novice to Ninja</p>
+                <div class="desc">Price : 300<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/python.jpeg">
+                <p class="book-title">Python and SQL Programming</p>
+                <div class="desc">Price : 180<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/c++.jpeg">
+                <p class="book-title">The C++ Programming Language</p>
+                <div class="desc">Price : 280<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/dotnet.jpeg">
+                <p class="book-title">.NET Framework Guide</p>
+                <div class="desc">Price : 390<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/gate.png">
+                <p class="book-title">GATE 2025 Computer Science</p>
+                <div class="desc">Price : 100<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/Advance java programming.jpg">
+                <p class="book-title">Advanced Java Programming</p>
+                <div class="desc">Price : 304<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/cc.jpg">
+                <p class="book-title">Cloud Computing</p>
+                <div class="desc">Price : 340<br><button>Add to Cart</button></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= ADVENTURE ================= -->
+    <section id="Adventure">
+        <h2>Adventure</h2>
+        <div class="gallery">
+
+            <div class="image-holder">
+                <img src="./images/Adv1.jfif">
+                <p class="book-title">Treasure Island</p>
+                <div class="desc">Price : 200<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/Adv2.jfif">
+                <p class="book-title">The Magic of the Unicorns</p>
+                <div class="desc">Price : 250<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/Adv3.jfif">
+                <p class="book-title">Summer Adventure Stories</p>
+                <div class="desc">Price : 180<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/Adv4.jfif">
+                <p class="book-title">Dragon Run</p>
+                <div class="desc">Price : 460<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/Adv5.jfif">
+                <p class="book-title">The Abominable Snowman</p>
+                <div class="desc">Price : 390<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/Adv6.jfif">
+                <p class="book-title">The Chronicles of Narnia</p>
+                <div class="desc">Price : 100<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/adv7.jfif">
+                <p class="book-title">The Mount Majestic</p>
+                <div class="desc">Price : 304<br><button>Add to Cart</button></div>
+            </div>
+
+            <div class="image-holder">
+                <img src="./images/adv8.jfif">
+                <p class="book-title">Darkest Dawn</p>
+                <div class="desc">Price : 340<br><button>Add to Cart</button></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= THRILLER ================= -->
+    <section id="Thriller">
+        <h2>Thriller</h2>
+        <div class="gallery">
+
+            <div class="image-holder"><img src="./images/th1.jfif"><p class="book-title">Darkest Dawn</p><div class="desc">Price : 120<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/th2.jfif"><p class="book-title">The Takings</p><div class="desc">Price : 402<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/th3.jfif"><p class="book-title">Death Sentence</p><div class="desc">Price : 299<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/th4.jfif"><p class="book-title">The Billion Dollar Spy</p><div class="desc">Price : 150<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/th5.jfif"><p class="book-title">The Dividing Line</p><div class="desc">Price : 300<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/th6.jfif"><p class="book-title">Strange Weather</p><div class="desc">Price : 389<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/th7.jfif"><p class="book-title">Mirror</p><div class="desc">Price : 269<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/th8.jfif"><p class="book-title">Malignant</p><div class="desc">Price : 451<br><button>Add to Cart</button></div></div>
+
+        </div>
+    </section>
+
+    <!-- ================= ROMANTIC ================= -->
+    <section id="Romantic">
+        <h2>Romantic</h2>
+        <div class="gallery">
+
+            <div class="image-holder"><img src="./images/r1.jfif"><p class="book-title">Prince in Paper</p><div class="desc">Price : 250<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/r2.jfif"><p class="book-title">Rogue</p><div class="desc">Price : 300<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/r3.jfif"><p class="book-title">Morning Writings</p><div class="desc">Price : 450<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/r4.jfif"><p class="book-title">Surrender</p><div class="desc">Price : 299<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/r5.jfif"><p class="book-title">Rosevalen</p><div class="desc">Price : 105<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/r6.jfif"><p class="book-title">The Collector's Item</p><div class="desc">Price : 199<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/r7.jfif"><p class="book-title">Highlanders Series 1</p><div class="desc">Price : 299<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/r8.jfif"><p class="book-title">Love Faith and Ears</p><div class="desc">Price : 349<br><button>Add to Cart</button></div></div>
+
+        </div>
+    </section>
+
+    <!-- ================= COMEDY ================= -->
+    <section id="Comedy">
+        <h2>Comedy</h2>
+        <div class="gallery">
+
+            <div class="image-holder"><img src="./images/c1.jfif"><p class="book-title">Aasif Mandi - No Life Man</p><div class="desc">Price : 400<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/c2.jfif"><p class="book-title">Three Men in a Boat</p><div class="desc">Price : 299<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/c3.jfif"><p class="book-title">Lose Weight</p><div class="desc">Price : 349<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/c4.jfif"><p class="book-title">Carry On Jeeves</p><div class="desc">Price : 299<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/c5.jfif"><p class="book-title">I Must Say</p><div class="desc">Price : 199<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/c6.jfif"><p class="book-title">Baggage</p><div class="desc">Price : 149<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/c7.jfif"><p class="book-title">Bangishly Funny</p><div class="desc">Price : 349<br><button>Add to Cart</button></div></div>
+            <div class="image-holder"><img src="./images/c8.jfif"><p class="book-title">The Bolds</p><div class="desc">Price : 250<br><button>Add to Cart</button></div></div>
+
+        </div>
+    </section>
+
+</div>
+
+            
+        
+                                
+                            
+                
+            <div class="back-to-home">
+                <a href="index.html" class="btn">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </body>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/search.js"></script>
+
+</html>
